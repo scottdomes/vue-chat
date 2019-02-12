@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MessageList v-bind:messages="messages"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MessageList from './components/MessageList.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    MessageList
+  },
+  data: () => ({
+    messages: []
+  })
 }
 </script>
 
